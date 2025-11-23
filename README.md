@@ -57,6 +57,13 @@ python Run.py
 > show 1:5                       # 显示指定行范围
 ```
 
+#### 日志命令
+```bash
+> log-on test.txt       # 开启日志记录
+> log-off test.txt      # 关闭日志记录
+> log-show test.txt     # 显示日志内容
+```
+
 #### 撤销重做
 ```bash
 > undo                   # 撤销上一次操作
@@ -79,9 +86,11 @@ python Run.py
 ├── EditorActions.py          # 文本编辑命令实现
 ├── CommonUtils.py            # 通用工具函数
 ├── Memento.py                # 状态持久化
+├── Logging.py                # 日志记录
 │
 ├── tests/                    # 测试目录
-│   └── test_editor_actions.py
+│   ├── test_editor_actions.py
+│   ├── test_logging.py
 │
 ├── docs/                     # 文档目录
 │   ├── 测试说明.md
