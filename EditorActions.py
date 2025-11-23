@@ -54,9 +54,6 @@ class AppendCommand(EditCommand):
         self.file.content.append(self.text)
         self.file.state = "modified"
         print("追加成功")
-        print("self.file:", self.file)
-        print("self.file.filePath:", self.file.filePath)
-        print("self.text:", self.text)
         WorkSpace.WorkSpace.logger.log_command(self.file.filePath, f"append \"{self.text}\"")
         
         # 添加到命令历史（用于undo/redo）
